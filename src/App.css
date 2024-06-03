@@ -5,5 +5,10 @@
   box-sizing: border-box;
 }
 
+.container {
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start;
+}
+
 
 
