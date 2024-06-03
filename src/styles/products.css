@@ -72,11 +72,44 @@
     font-size: 14px;
     font-family: "Montserrat";
     font-weight: 700;
-
     width: 261px;
     height: 52px;
     text-align: center;
     border-radius: 5px;
     cursor: pointer;
-    /* margin: 24px; */
+    margin-bottom: 24px;
 }
+
+@media screen and (max-width: 700px) {
+.product-hero {
+    margin: 100px 10px;
+}
+
+.product-p-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-p {
+    display: none;
+}
+
+.product-p1 {
+    margin: 10px;
+}
+
+.product-p2 {
+    width: 261px;
+    height: 40px;
+}
+
+.products {
+    flex-direction: column;
+    width: 183px;
+}
+
+
+}
+
