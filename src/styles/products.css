@@ -56,6 +56,15 @@
     gap: 5px;
 }
 
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 183px;
+    height: 400px;
+}
+
 
 
 .product-discount {
@@ -105,7 +114,7 @@
     height: 40px;
 }
 
-.products {
+.products-1{
     flex-direction: column;
     width: 183px;
 }

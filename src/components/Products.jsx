@@ -61,7 +61,7 @@ function Products() {
                             className="link"
                             key={product.id}
                             >
-                            <div className="products">
+                            <div className="product">
                                 <img 
                                     width={183} 
                                     height={238} 
