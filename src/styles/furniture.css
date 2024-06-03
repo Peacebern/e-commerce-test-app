@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.fur-hero {
+    padding-left: 2rem;
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.fur-hero-flex1 {
+    display: flex;
+    gap: 15px;
+}
+
+.fur-hero-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

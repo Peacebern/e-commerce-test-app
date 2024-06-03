@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.post-hero-1 {
+    margin-top: 8rem;
+}
+
+.hen {
+    width: 348px;
+    box-shadow: 0  4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgb(191, 191, 191);
+}
+
+.post-p {
+    text-align: center;
+}
+
+.post-p1 {
+    color:  hsl(202, 87%, 54%);
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.post-p2 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.post-hero {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    max-width: 1300px;
+    margin: 0 auto;
+    align-items: center;
+    /* justify-content: space-evenly; */
+    justify-content: center;
+    gap: 1rem;
+}
+
+.post-hero-p {
+    /* background-color: red; */
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.post-hero-p1 {
+    display: flex;
+    gap: 1rem;
+}
+
+.post-time-comment {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 1rem;
+}
+
+.post-time{
+    display: flex;
+    gap: 5px;
+}
+
+.post-comment {
+    display: flex;
+    gap: 5px;
+}
+
+.post-button {
+    display: flex;
+    gap: 0.5rem;
+
+}
+
+.im-mt1 {
+    margin-top: 3px;
+}
