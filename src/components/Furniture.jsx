@@ -1,23 +1,39 @@
 import React from 'react';
 import "../styles/furniture.css";
-import cookware from "../assets/Images/hero-fur-images/cookware.svg";
-import bowel from "../assets/Images/hero-fur-images/bowel.svg";
-import chandelier from "../assets/Images/hero-fur-images/chandelier.svg";
-import vase from "../assets/Images/hero-fur-images/vase.svg";
+import { Link } from "react-router-dom";
 
 
 
 export default function Furniture() {
     return(
-        <div className='fur-hero'>
-            <div>
-                <img src={cookware} />
-            </div>
-            <div className='fur-hero-flex'>
-                <div><img src={bowel}/></div>
-                <div className='fur-hero-flex1'>
-                    <img src={chandelier} />
-                    <img src={vase}/>
+        <div>
+                <div className='fur-hero'>
+                    <div className="right-carousel">
+                        <p>5 Items</p>
+                        <h2>FURNITURE</h2>
+                        <Link to="#">Read More</Link>
+                    </div>
+
+                    <div className="left-carousel">
+                        <div className="top-carousel">
+                        <p>5 Items</p>
+                        <h3>FURNITURE</h3>
+                        <Link to="#">Read More</Link>
+                        </div>
+
+                        <div className="bottom-carousel">
+                        <div className="bottom-carousel-one">
+                            <p>5 Items</p>
+                            <h3>FURNITURE</h3>
+                            <Link to="#">Read More</Link>
+                        </div>
+
+                        <div className="bottom-carousel-two">
+                            <p>5 Items</p>
+                            <h3>FURNITURE</h3>
+                            <Link to="#">Read More</Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

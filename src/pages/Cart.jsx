@@ -40,7 +40,7 @@ function Cart() {
         <Navbar />
 
         <div className="home-cart">
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
         <MdKeyboardArrowRight className="arrow-cart" />
         <Link to="/shop">Shop</Link>
         <MdKeyboardArrowRight className="arrow-cart1" />

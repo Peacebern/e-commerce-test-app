@@ -95,14 +95,6 @@ export default function Navbar() {
                                         Pages
                                     </NavLink>
                                 </nav>
-                                {/* <div className="nav-2-sub">
-                                    <Link to="/home">Home</Link>
-                                    <Link to="/shop">Shop</Link>
-                                    <Link to="/about">About</Link>
-                                    <Link to="/blog">Blog</Link>
-                                    <Link to="/contact">Contact</Link>
-                                    <Link to="/pages">Pages</Link>
-                                </div> */}
                             </div>
                             <div className="nav-2-color">
                                 <ul className="nav-2-ul">
