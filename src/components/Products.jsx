@@ -21,7 +21,7 @@ function Products() {
 
 
     useEffect(() => {
-        fetch('https://dummyjson.com/products?limit=10')
+        fetch(`https://dummyjson.com/products?limit=${count}`)
         .then(res => res.json())
         .then((data) => {
             setProducts(data.products);
@@ -86,7 +86,7 @@ function Products() {
             </div>
 
             <div>
-                <button onClick={loadMore} className="product-more" >LOAD MORE PRODUCTS</button>
+                <button onClick={loadMore}  className="product-more" >LOAD MORE PRODUCTS</button>
             </div>
         </div>
     );
