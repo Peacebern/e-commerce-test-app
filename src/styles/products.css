@@ -19,6 +19,13 @@
     font-family: "Montserrat";
 }
 
+.link {
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
 .product-p {
     color: rgb(115, 115, 115);
     font-size: 20px;
