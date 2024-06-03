@@ -1,15 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* .nav-hero-1 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-} */
-
 .nav-hero {
     background-color: rgb(35, 133, 109);
     display: flex;
     justify-content:space-between;
-    /* text-align: center; */
     color: white;
     font-size: 12px;
     align-items: center;
@@ -49,7 +43,6 @@
     align-items: center;
     gap: 2rem;
     padding-left: 2rem;
-    
 }
 
 a {
@@ -63,10 +56,32 @@ a {
     font-weight: 700;
 }
 
-.nav-2-sub {
+/* .nav-2-sub {
     display: flex;
     gap: 1rem;
+} */
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+}
+
+.dropdown {
+    font-size: 25px;
+}
+
 
 .nav-2-color {
     color: hsl(202, 87%, 54%);
@@ -75,6 +90,7 @@ a {
 
 .nav-2-li {
     display: flex;
+    color: hsl(202, 87%, 54%);
 }
 
 .nav-2-ul {
@@ -82,4 +98,61 @@ a {
     display: flex;
     align-items: center;
     gap: 1rem;
+    
+}
+
+.cart-num {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 12px;
+}
+
+.register {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.down-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 38px;
+    height: 60px;
+}
+
+.register-link-bg {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-2-li,
+.register-link-bg span {
+    display: flex;
+    align-items: center;
+    color: hsl(202, 87%, 54%);
+}
+
+
+
+@media screen and (max-width: 700) {
+    .down-nav {
+        padding: 0 10px;
+        margin: 0;
+    }
+
+    .cover-div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

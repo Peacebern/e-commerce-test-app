@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink} from "react-router-dom";
 import "../styles/navbar.css";
+import { RiArrowDropDownLine } from "react-icons/ri";
 import call from "../assets/Images/Navbar-images/call.svg";
 import email from "../assets/Images/Navbar-images/email.svg";
 import insta from "../assets/Images/Navbar-images/insta.svg";
@@ -11,76 +12,230 @@ import search from "../assets/Images/Navbar-images/search.svg";
 import shopping from "../assets/Images/Navbar-images/shopping.svg";
 import likes from "../assets/Images/Navbar-images/likes.svg";
 import user from "../assets/Images/Navbar-images/user.svg";
+import menuIcon from "../assets/Images/Navbar-images/vector.png";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+
 
 export default function Navbar() {
-return (
-<div className="ben">
-    <header>
-    <nav>
-        <div className="nav-hero-1">
-            <div className="nav-hero">
-                <div>
-                    <div className="nav-call">
-                        <img src={call} />
-                        <p>+234-9044739674</p>
-                        <img src={email} className="im-mt"/>
-                        <p>peace8282bern@gmail.com</p>
+    const [widthSize, setWidthSize] = useState(window.innerWidth);
+    const [drop, setDrop] = useState(false);
+    const dropdown = () => {
+        setDrop(!drop);
+    };
+    const cart = useSelector((state) => state.cart.items);
+
+    useEffect(() => {
+        const handleResize = () => setWidthSize(window.innerWidth);
+
+        window.addEventListener("resize", handleResize);
+        return () => {
+        window.removeEventListener("resize", handleResize);
+        };
+    }, [widthSize]);
+
+    return (
+        <div className="ben">
+            
+            {widthSize > 700 ? (
+                <header>
+                <nav>
+                    <div className="nav-hero-1">
+                        <div className="nav-hero">
+                            <div>
+                                <div className="nav-call">
+                                    <img src={call} />
+                                    <p>+234-9044739674</p>
+                                    <img src={email} className="im-mt"/>
+                                    <p>peace8282bern@gmail.com</p>
+                                </div>
+    
+                            </div>
+    
+                            <div>
+                                <p>Follow Us  and get a chance to win 80% off</p>
+                            </div>
+    
+                            <div>
+                                <ul className="nav-ul">
+                                    <p>Follow Us  :</p>
+                                    <li className="li-nav1"><a><img src={insta}/></a></li>
+                                    <li className="li-nav1"><a><img src={youtube}/></a></li>
+                                    <li className="li-nav1"><a><img src={facebook}/></a></li>
+                                    <li className="li-nav1"><a><img src={twitter}/></a></li>
+                                </ul>
+                            </div>
+                        </div>
+    
+                        <div className="nav-2-hero">
+                            <div className="nav-2">
+                                <div className="nav-2-ban">
+                                    <p>Bandage</p>
+                                </div>
+                                <nav className="nav-links">
+                                    <NavLink className="nav-link" to="/home">
+                                        Home
+                                    </NavLink>
+                                    <NavLink className="nav-link" to="/shop">
+                                        Shop
+                                    <span className="dropdown">
+                                        <RiArrowDropDownLine />
+                                    </span>
+                                    </NavLink>
+                                    <NavLink className="nav-link" to="#">
+                                        About
+                                    </NavLink>
+                                    <NavLink className="nav-link" to="#">
+                                        Blog
+                                    </NavLink>
+                                    <NavLink className="nav-link" to="#">
+                                        Contact
+                                    </NavLink>
+                                    <NavLink className="nav-link" to="#">
+                                        Pages
+                                    </NavLink>
+                                </nav>
+                                {/* <div className="nav-2-sub">
+                                    <Link to="/home">Home</Link>
+                                    <Link to="/shop">Shop</Link>
+                                    <Link to="/about">About</Link>
+                                    <Link to="/blog">Blog</Link>
+                                    <Link to="/contact">Contact</Link>
+                                    <Link to="/pages">Pages</Link>
+                                </div> */}
+                            </div>
+                            <div className="nav-2-color">
+                                <ul className="nav-2-ul">
+                                    <li >
+                                        <Link className="nav-2-li" to="#">
+                                            <img src={user}/>
+                                            <p>Login / Register</p>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="nav-2-li" to="#">
+                                            <img src={search}/>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link to="/cart">
+                                            <span className="nav-2-li">
+                                                <img src={shopping}/>
+                                                <p className="cart-num">{cart.length}</p>
+                                            </span>
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="nav-2-li" to="#">
+                                            <img src={likes}/>
+                                            <p>1</p>
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                </header>
+                ) : (
+                <div className="cover-div">
+                    <div className="down-nav">
+                        <h1 className="nav-2-ban">Bandage</h1>
+                        <div className="register">
+                            <Link className="nav-2-li register-link-bg" to="#">
+                                <img src={search}/>
+                            </Link>
+                            <Link to="/cart">
+                                <span className="nav-2-li register-link-bg">
+                                    <img src={shopping}/>
+                                    <p className="cart-num">{cart.length}</p>
+                                </span>
+                            </Link>
+                            <div onClick={dropdown} className="register-link-bg">
+                                <img src={menuIcon} alt="menu" />
+                            </div>
+                        </div>
                     </div>
 
+                    {drop === true && (
+                        <div
+                        className="droppedMenu"
+                        style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            width: "100%",
+                            height: "98vh",
+                        }}
+                        >
+                        <nav
+                            className="link-nav"
+                            style={{
+                            width: "100%",
+                            height: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            color: "black",
+                            gap: "50px",
+                            }}
+                        >
+                            <NavLink
+                            className="nav-link"
+                            to="/home"
+                            style={{ fontSize: "20px" }}
+                            >
+                            Home
+                            </NavLink>
+                            <NavLink
+                            className="nav-link"
+                            to="/shop"
+                            style={{ fontSize: "20px" }}
+                            >
+                            Shop
+                            </NavLink>
+                            <NavLink
+                            className="nav-link"
+                            to="#"
+                            style={{ fontSize: "20px" }}
+                            >
+                            About
+                            </NavLink>
+                            <NavLink
+                            className="nav-link"
+                            to="#"
+                            style={{ fontSize: "20px" }}
+                            >
+                            Blog
+                            </NavLink>
+                            <NavLink
+                            className="nav-link"
+                            to="#"
+                            style={{ fontSize: "20px" }}
+                            >
+                            Contact
+                            </NavLink>
+                            <NavLink
+                            className="nav-link"
+                            to="#"
+                            style={{ fontSize: "20px" }}
+                            >
+                            Pages
+                            </NavLink>
+                            <Link
+                            className="nav-2-li"
+                            to="#"
+                            style={{ color: "#23a6f0", fontSize: "20px" }}
+                            >
+                            <img src={user} /> Login / Register
+                            </Link>
+                        </nav>
+                        </div>
+                    )}
                 </div>
-
-                <div>
-                    <p>Follow Us  and get a chance to win 80% off</p>
-                </div>
-
-                <div>
-                    <ul className="nav-ul">
-                        <p>Follow Us  :</p>
-                        <li className="li-nav1"><a><img src={insta}/></a></li>
-                        <li className="li-nav1"><a><img src={youtube}/></a></li>
-                        <li className="li-nav1"><a><img src={facebook}/></a></li>
-                        <li className="li-nav1"><a><img src={twitter}/></a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="nav-2-hero">
-                <div className="nav-2">
-                    <div className="nav-2-ban">
-                        <p>Bandage</p>
-                    </div>
-                    <div className="nav-2-sub">
-                        <Link to="/home">Home</Link>
-                        <Link to="/shop">Shop</Link>
-                        <Link to="/about">About</Link>
-                        <Link to="/blog">Blog</Link>
-                        <Link to="/contact">Contact</Link>
-                        <Link to="/pages">Pages</Link>
-                    </div>
-                </div>
-                <div className="nav-2-color">
-                    <ul className="nav-2-ul">
-                        <li className="nav-2-li">
-                            <img src={user}/>
-                            <p>Login / Register</p>
-                        </li>
-                        <li className="nav-2-li">
-                            <img src={search}/>
-                        </li>
-                        <li className="nav-2-li">
-                            <img src={shopping}/>
-                            <p>1</p>
-                        </li>
-                        <li className="nav-2-li">
-                            <img src={likes}/>
-                            <p>1</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            )}
         </div>
-    </nav>
-    </header>
-</div>
-);
+    );
 }
