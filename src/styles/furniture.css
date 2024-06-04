@@ -14,7 +14,7 @@
     flex-direction: column;
     height: 100%;
     width: 452px;
-    background-image: url("/src/assets/images/hero-fur-images/furcookware.svg");
+    background-image: url("../assets/Images/hero-fur-images/furcookware.svg");
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -78,7 +78,7 @@ height: 300px;
 width: 679px;
 display: flex;
 flex-direction: column;
-background-image: url("/src/assets/images/hero-fur-images/furbowel.svg");
+background-image: url("../assets/Images/hero-fur-images/furbowel.svg");
 background-position: center;
 background-repeat: no-repeat;
 }
@@ -95,7 +95,7 @@ display: flex;
 flex-direction: column;
 height: 100%;
 width: 332px;
-background-image: url("/src/assets/images/hero-fur-images/furchandelier.svg");
+background-image: url("../assets/Images/hero-fur-images/furchandelier.svg");
 }
 
 .bottom-carousel-two {
@@ -103,7 +103,7 @@ display: flex;
 flex-direction: column;
 height: 100%;
 width: 332px;
-background-image: url("/src/assets/images/hero-fur-images/furvase.svg");
+background-image: url("../assets/Images/hero-fur-images/furvase.svg");
 }
 
 @media screen and (max-width: 700px) {
