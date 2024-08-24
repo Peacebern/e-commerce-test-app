@@ -45,9 +45,9 @@ export default function Navbar() {
                             <div>
                                 <div className="nav-call">
                                     <img src={call} />
-                                    <p>+234-9044739674</p>
+                                    <p className="im-mt">+234-9044739674</p>
                                     <img src={email} className="im-mt"/>
-                                    <p>peace8282bern@gmail.com</p>
+                                    <p className="im-mt">peace8282bern@gmail.com</p>
                                 </div>
         
                             </div>
