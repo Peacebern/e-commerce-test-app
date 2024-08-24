@@ -13,12 +13,11 @@
 .footer-hero {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     text-align: center;
     font-family: "Montserrat";
-    align-self: center;
     max-width: 1300px;
-    padding: 1rem 5rem 1rem 5rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .footer-img {
@@ -29,12 +28,13 @@
 .footer-2 {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-self: center;
+    gap: 40px;
 }
 
 .footer-input {
-    padding: 2rem;
+    padding: 1rem;
     color: rgb(115, 115, 115);
     font-size: 14px;
     border: none;
@@ -44,7 +44,7 @@
 }
 
 .footer-input2 {
-    padding: 2rem;
+    padding: 1rem;
     font-size: 14px;
     color: white;
     border: none;
@@ -52,6 +52,7 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+
 
 .footer-foot {
     background-color: hsl(0, 0%, 98%);

@@ -41,9 +41,13 @@
 }
 
 .post-hero-p {
-    /* background-color: red; */
+    /* background-color: blue; */
     padding-left: 2rem;
     padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .post-hero-p1 {

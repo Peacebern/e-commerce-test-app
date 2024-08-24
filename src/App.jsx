@@ -12,7 +12,7 @@ import Footer from './components/Footer.jsx';
 function App() {
 
   return (
-    <div>
+    <div className='container'>
       <Navbar />
       <Furniture />
       <Products />

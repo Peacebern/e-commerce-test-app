@@ -49,7 +49,7 @@ export default function Navbar() {
                                     <img src={email} className="im-mt"/>
                                     <p>peace8282bern@gmail.com</p>
                                 </div>
-    
+        
                             </div>
     
                             <div>
@@ -171,7 +171,7 @@ export default function Navbar() {
                             alignItems: "center",
                             justifyContent: "center",
                             color: "black",
-                            gap: "50px",
+                            gap: "40px",
                             }}
                         >
                             <NavLink
