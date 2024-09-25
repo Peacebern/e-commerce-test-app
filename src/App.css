@@ -1,18 +1,25 @@
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	max-width: 100%;
 }
 
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
+}
+
+/* .full-bleed {
+	padding-inline: 2rem;
+} */
+
+@media screen and (min-width: 1300px) {
+	.full-bleed {
+		padding-inline: var(--full-bleed);
+	}
 }
 
 .container {
-  scroll-snap-type: y mandatory;
-  scroll-snap-align: start;
+	scroll-snap-type: y mandatory;
+	scroll-snap-align: start;
 }
-
-
-
