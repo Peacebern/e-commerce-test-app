@@ -9,7 +9,7 @@
 	align-items: center;
 	gap: 2rem;
 	overflow-x: hidden;
-	/* background-color: blue; */
+	padding: 0 1rem 0 1rem;
 }
 
 .im-mt {
@@ -19,7 +19,6 @@
 .nav-call {
 	display: flex;
 	align-items: center;
-	/* gap: 2px; */
 }
 
 .li-nav1 {
@@ -38,7 +37,7 @@
 	padding: 0.5rem 0;
 	align-items: center;
 	width: 100%;
-	/* background-color: red; */
+	padding: 0 1rem 0 1rem;
 }
 
 .nav-2 {
